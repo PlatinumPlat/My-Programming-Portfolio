@@ -11,7 +11,7 @@ public class test {
         // Arrays.sort(, agecmp);
     }
 
-    class student {
+    public static class student {
         String name;
         int grade;
         int age;
@@ -21,11 +21,11 @@ public class test {
             grade = g;
             age = a;
         }
-    }
 
-    class AgeComparator implements Comparator<student> {
-        public int compare(student a, student b) {
-            return Integer.compare(a.age, b.age);
+        public class AgeComparator implements Comparator<student> {
+            public int compare(student a, student b) {
+                return Integer.compare(a.age, b.age);
+            }
         }
     }
 }
