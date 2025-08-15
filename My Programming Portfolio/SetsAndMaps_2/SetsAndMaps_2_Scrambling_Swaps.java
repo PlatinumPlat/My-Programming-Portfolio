@@ -1,8 +1,12 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class SetsAndMaps_2_Scrambling_Swaps {
     public static void main(String[] args) {
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
         Scanner in = new Scanner(System.in);
         
         int N = in.nextInt();
