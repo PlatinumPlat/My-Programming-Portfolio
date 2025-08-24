@@ -1,10 +1,15 @@
-package Binary_Search_1;
-
+import java.io.IOException;
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.*;
+import java.lang.Math;
 
 public class TheGreatRevegation {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        File inputFile = new File("revegetate.in");
+        Scanner in = new Scanner(inputFile);
+        PrintWriter out = new PrintWriter("revegetate.out");
+
         int N = in.nextInt();
         int M = in.nextInt();
         Map<Integer, ArrayList<Integer>> prev = new HashMap<>();
@@ -68,6 +73,7 @@ public class TheGreatRevegation {
             }
         }
 
-        System.out.println(output);
+        out.println(output);
+        out.close();
     }
 }
