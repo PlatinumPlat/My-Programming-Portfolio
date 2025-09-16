@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int N = in.nextInt();
+        Map<Integer, Long> c = new HashMap<>();
+        Map<Integer, Long> time = new HashMap<>();
+        Map<Integer, Boolean> recieved = new HashMap<>();
+        long t = 0L;
+        for (int i=0; i<N; i++) {
+            char characterNext = in.next().charAt(0);
+
+            if (characterNext=='R') {
+                int n = in.nextInt();
+                c.put(n, t);
+                t++;
+                recieved.put(n, false);
+            } else if (characterNext=='W') {
+                t+=in.nextInt()-1;
+            } else {
+                int n = in.nextInt();
+                recieved.put(n, true);
+                time.put(n, time.getOrDefault(n, 0L)+t-c.get(n));
+                t++;
+            }
+        }
+
+        List<Integer> sortedKeys = new ArrayList<>(recieved.keySet());
+        Collections.sort(sortedKeys);
+
+        for (int person : sortedKeys) {
+            if (recieved.get(person)) {
+                System.out.println(person + " " + time.get(person));
+            } else {
+                System.out.println(person + " " + -1);
+            }
+        }
+
+
+    }
+}
