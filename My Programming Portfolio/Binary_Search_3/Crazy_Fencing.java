@@ -1,5 +1,4 @@
 package Binary_Search_3;
-import java.lang.Math;
 import java.util.*;
 public class Crazy_Fencing {
     public static void main(String[] args) {

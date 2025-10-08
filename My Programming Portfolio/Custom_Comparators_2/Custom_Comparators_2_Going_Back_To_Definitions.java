@@ -1,7 +1,6 @@
 package Custom_Comparators_2;
 
 import java.util.*;
-import java.lang.Math;
 
 public class Custom_Comparators_2_Going_Back_To_Definitions {
     public static void main(String[] args) {

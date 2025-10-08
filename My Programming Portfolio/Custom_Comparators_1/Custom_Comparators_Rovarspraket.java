@@ -1,6 +1,6 @@
 package Custom_Comparators_1;
 
-import java.util.*;;
+import java.util.*;
 
 public class Custom_Comparators_Rovarspraket {
     public static void main(String[] args) {
